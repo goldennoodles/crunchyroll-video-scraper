@@ -1,5 +1,5 @@
 Crunchyroll Scraper.
 
-Future Archetecture
+Future Architecture
 
-![Archetecture](image.png)
+![Architecture](Screenshot 2023-09-16 at 18.45.22.png)
