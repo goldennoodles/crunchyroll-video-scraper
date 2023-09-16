@@ -2,4 +2,4 @@ Crunchyroll Scraper.
 
 Future Architecture
 
-![Architecture]("Architecture.png")
+![Architecture](Architecture.png)
