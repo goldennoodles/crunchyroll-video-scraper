@@ -22,8 +22,8 @@ const urlBase = 'https://www.cruchyroll.com/';
 
 async function scrapeHomePage(url) {
     const browser = await puppeteer.launch({
-        headless: 'new'
-        // headless: false
+        // headless: 'new'
+        headless: false
     });
 
     const page = await browser.newPage();
@@ -42,11 +42,13 @@ async function scrapeHomePage(url) {
 }
 
 async function doJsonConversionAndSave(combinedData) {
-    let date = new Date();
-    date.setMonth(date.getMonth() + 1);
+    // let date = new Date();
+    // date.setMonth(date.getMonth() + 1);
 
-    const loadedDate = date.getDay() + "-" + date.getMonth() + "-" + date.getFullYear();
-    const loadedFileName = loadedDate + "_data-list-full.json";
+    // const loadedDate = date.getDay() + "-" + date.getMonth() + "-" + date.getFullYear();
+
+    //TODO: Need to fix the date, forwhatever reason its not outputting the correct date.
+    const loadedFileName = "_data-list-full.json";
 
     fs.writeFile(loadedFileName, JSON.stringify(combinedData), (err) => {
         if (err) throw err;
